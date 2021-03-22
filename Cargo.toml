@@ -1,0 +1,24 @@
+[package]
+name = "morton-encoding"
+version = "2.0.0"
+authors = ["froderick <velona@ahiru.eu>"]
+edition = "2018"
+description = "A crate for encoding and decoding Morton (\"Z-order\") keys."
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+keywords = ["Z-order", "fractal", "curve", "Morton"]
+categories = ["algorithms"]
+homepage = "https://github.com/DoubleHyphen/morton-encoding"
+documentation = "https://docs.rs/morton-encoding/2.0.0/morton_encoding/"
+repository = "https://github.com/DoubleHyphen/morton-encoding"
+
+[dependencies]
+num-traits = "0.2"
+num = "0.2"
+
+[dev-dependencies]
+rand = "0.8"
+
+[features]
+default = ["std"]
+std = []
