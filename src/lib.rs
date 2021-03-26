@@ -6,9 +6,10 @@
 //! This is helpful for linearising the points 
 //! of data structures whilst preserving
 //! some measure of locality. Z-order encoding isn't as good at preserving
-//! locality as Hilbert encoding, but it is much easier to compute;
-//! nonetheless, for Hilbert encoding, the user may check out the `lindel`
-//! crate which will be hopefully released soon.
+//! locality as Hilbert encoding, but it is much easier to compute.
+//! (For Hilbert encoding please refer to the 
+//! ([`lindel`](https://crates.io/crates/lindel)
+//! crate instead.)
 //!
 //! # Usage
 //! The user is cordially advised to look for solutions in the following order:
@@ -24,10 +25,11 @@
 //! let reassembled_input = morton_decode(output);
 //! assert_eq!(input, reassembled_input);
 //! ```
-//! 2. If 128 bits are not enough, the user should use the `lindel` crate
-//! (which will be released hopefully shortly) which will contain the
-//! `create_lineariseable_data_type` macro. This will unfortunately
-//! require manual implementation of any trait that
+//! 
+//! 2. If 128 bits are not enough, the user should use
+//! [`lindel`](https://crates.io/crates/lindel),
+//! which contains the `create_lineariseable_data_type` macro. This
+//! will unfortunately require manual implementation of any trait that
 //! the macro doesn't implement automatically, such as subtraction.
 //! 
 //! 3. If the co-ordinates come at the end of a long iterator chain of length

@@ -5,6 +5,8 @@ The `morton-encoding` crate offers convenience functions for transforming arrays
 
 This crate was originally built with fractal analysis in mind. Nevertheless, Morton encoding can also be used for other use-cases, such as the efficient searching of data-bases.
 
+The [`lindel`](https://crates.io/crates/lindel) crate is an extension of this one, also containing Hilbert functions.
+
 ## Usage
 The `morton_encode` and `morton_decode` functions ought to be sufficient for most use-cases. They are used as follows:
 
@@ -24,4 +26,4 @@ For more detailed information, as well as information on other similar crates, p
 The Morton encoding can be computed very efficiently and branchlessly. For use-cases where one needs to keep splitting the available space recursively into halves, it's unmatched; quad-trees and oct-trees are a great example of that.
 
 ## Disadvantages
-Morton encoding in general isn't very good at preserving locality, at least when compared to eg Hilbert encoding. Furthermore, the present crate only implements it for cases where each coordinate has the same amount of significant bits; for cases where that's not true, the user is urged to use the `lindel` crate, which will hopefully come out soon:tm:.
+Morton encoding in general isn't very good at preserving locality, at least when compared to eg Hilbert encoding. Furthermore, the present crate only implements it for cases where each coordinate has the same amount of significant bits; for cases where that's not true, the user is urged to use [`lindel`](https://crates.io/crates/lindel) instead.
