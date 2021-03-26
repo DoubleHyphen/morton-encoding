@@ -1,5 +1,0 @@
-/target
-**/*.rs.bk
-/.gitignore
-/Cargo.lock
-/other-crate-tests/*
